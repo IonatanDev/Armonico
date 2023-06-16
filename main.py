@@ -18,7 +18,7 @@ a_0 = -k*(x_0-l_0)/m
 st.title('Definimos el algoritmo recursivo')
 st.latex(r''' x_i = x_{i-1} + v_{i-1} \cdot \Delta t''')
 st.latex(r''' v_i = v_{i-1} + a_{i-1} \cdot \Delta t''')
-st.latex(r''' a_i = \frac{-k \cdot (l_0 - x_i)}{m}''')
+st.latex(r''' a_i = \frac{-k \cdot (x_i - l_0)}{m}''')
 
 st.title('Definimos el paso y el numero de iteraciones')
 
@@ -35,7 +35,7 @@ t = [0]
 for i in range (1,N+1):
     X.append(X[i-1] + V[i-1] * delta)
     V.append(V[i-1] + A[i-1] * delta)
-    A.append(-k * (l_0-X[i]) / m)
+    A.append(-k * (X[i]- l_0) / m)
     t.append(t[i-1] + delta)
 
 fig, ax = plt.subplots()
