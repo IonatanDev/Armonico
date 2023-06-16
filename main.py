@@ -10,7 +10,7 @@ l_0 = st.number_input('Longitud natural del resorte (m):', value=1.0)
 
 st.title('Determinamos las condiciones iniciales')
 #Establecemos condiciones iniciales
-x_0 = st.numeer_input('Posicion inicial (m):')
+x_0 = st.number_input('Posicion inicial (m):')
 v_0 = st.number_input('Velocidad inicial (m/s):')
 a_0 = -k*(x_0-l_0)/m
 
