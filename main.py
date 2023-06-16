@@ -42,7 +42,10 @@ fig, ax = plt.subplots()
 ax.plot(t, X)
 st.pyplot(fig)
 
+st.write('Valores de x')
 st.write(X)
+st.write('Valores de v')
 st.write(V)
+st.write('Valores de a')
 st.write(A)
 
