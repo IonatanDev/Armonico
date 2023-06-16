@@ -22,8 +22,8 @@ st.latex(r''' a_i = \frac{-k \cdot (x_i - l_0)}{m}''')
 
 st.title('Definimos el paso y el numero de iteraciones')
 
-delta = st.number_input('largo temporal del paso (s):', value=0.1, step = 0.0001)
-N = st.slider('Numero de iteraciones:', value = 1000)
+delta = st.number_input('largo temporal del paso (s):', min_value = 0.00001 , value=0.1)
+N = st.slider('Numero de iteraciones:', value = 10, max_value=100000)
 
 st.title('Ejecutamos la simulacion y graficamos los resultados')
 
