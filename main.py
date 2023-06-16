@@ -1,4 +1,5 @@
 import streamlit as st
+import matplotlib.pyplot as plt
 
 st.title('Resolucion numerica del oscilador armonico')
 
@@ -37,4 +38,6 @@ for i in range (1,N+1):
     A.append(-k * (l_0-X[i]) / m)
     t.append(t[i-1] + delta)
 
-st.line_chart(x = t, y = X)
+fig, ax = plt.subplots()
+ax.plot(t, X)
+st.pyplot(fig)
