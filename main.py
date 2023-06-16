@@ -41,3 +41,8 @@ for i in range (1,N+1):
 fig, ax = plt.subplots()
 ax.plot(t, X)
 st.pyplot(fig)
+
+st.write(X)
+st.write(V)
+st.write(A)
+
