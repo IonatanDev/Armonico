@@ -19,4 +19,22 @@ st.latex(r''' x_i = x_{i-1} + v_{i-1} \cdot \Delta t''')
 st.latex(r''' v_i = v_{i-1} + a_{i-1} \cdot \Delta t''')
 st.latex(r''' a_i = \frac{-k \cdot (l_0 - x_i)}{m}''')
 
+st.title('Definimos el paso y el numero de iteraciones')
 
+delta = st.number_input('largo temporal del paso (s):', value=0.1)
+N = st.slider('Numero de iteraciones:', value = 100)
+
+st.title('Ejecutamos la simulacion y graficamos los resultados')
+
+X = [x_0]
+V = [v_0]
+A = [a_0]
+t = [0]
+
+for i in range (1,N+1):
+    X.append(X[i-1] + V[i-1] * delta)
+    V.append(V[i-1] + A[i-1] * delta)
+    A.append(-k * (l_0-X[i]) / m)
+    t.append(t[i-1] + delta)
+
+st.line_chart(x = t, y = X)
