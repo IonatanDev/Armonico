@@ -42,6 +42,7 @@ fig, ax = plt.subplots()
 ax.plot(t, X)
 st.pyplot(fig)
 
+st.title ("Listas de valores (por si quieren chequear algo a mano)")
 st.write('Valores de x')
 st.write(X)
 st.write('Valores de v')
@@ -49,3 +50,8 @@ st.write(V)
 st.write('Valores de a')
 st.write(A)
 
+st.title('Informacion sobre este proyecto')
+
+st.write("Autor: Ionatan Perez")
+st.write("Contacto: ionatan@gmail.com")
+st.write("https://github.com/IonatanDev/Armonico")
